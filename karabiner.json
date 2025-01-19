@@ -7,31 +7,31 @@
             "type": "basic"
         },
         {
-            "from": { "key_code": "f2" },
-            "to": [
-                {
-                    "key_code": "c",
-                    "modifiers": ["command"]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "from": { "key_code": "f3" },
-            "to": [
-                {
-                    "key_code": "v",
-                    "modifiers": ["command"]
-                }
-            ],
-            "type": "basic"
-        },
-        {
             "from": { "key_code": "f5" },
             "to": [
                 {
                     "key_code": "r",
                     "modifiers": ["command"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "from": { "key_code": "page_up" },
+            "to": [
+                {
+                    "key_code": "left_arrow",
+                    "modifiers": ["left_control"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "from": { "key_code": "page_down" },
+            "to": [
+                {
+                    "key_code": "right_arrow",
+                    "modifiers": ["left_control"]
                 }
             ],
             "type": "basic"
@@ -259,6 +259,54 @@
                     "value": 1
                 }
             ],
+            "description": "7",
+            "from": {
+                "key_code": "7",
+                "modifiers": { "optional": ["any"] }
+            },
+            "to": [{ "key_code": "7" }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "numpad initiator",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "description": "8",
+            "from": {
+                "key_code": "8",
+                "modifiers": { "optional": ["any"] }
+            },
+            "to": [{ "key_code": "8" }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "numpad initiator",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "description": "9",
+            "from": {
+                "key_code": "9",
+                "modifiers": { "optional": ["any"] }
+            },
+            "to": [{ "key_code": "9" }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "numpad initiator",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
             "description": "Plus (+)",
             "from": {
                 "key_code": "s",
@@ -349,7 +397,7 @@
                     "value": 1
                 }
             ],
-            "description": "backspace",
+            "description": "Backspace",
             "from": {
                 "key_code": "delete_or_backspace",
                 "modifiers": { "optional": ["any"] }
@@ -365,7 +413,7 @@
                     "value": 1
                 }
             ],
-            "description": "Lockscreen",
+            "description": "Lock screen",
             "from": {
                 "key_code": "escape",
                 "modifiers": { "optional": ["any"] }
@@ -534,7 +582,7 @@
                     "value": 1
                 }
             ],
-            "description": "Select All",
+            "description": "Select all",
             "from": {
                 "key_code": "a",
                 "modifiers": { "optional": ["any"] }
@@ -555,14 +603,14 @@
                     "value": 1
                 }
             ],
-            "description": "Workspace swtich / app switch",
+            "description": "Next app",
             "from": {
-                "key_code": "q",
+                "key_code": "w",
                 "modifiers": { "optional": ["any"] }
             },
             "to": [
                 {
-                    "key_code": "grave_accent_and_tilde",
+                    "key_code": "tab",
                     "modifiers": ["command"]
                 }
             ],
@@ -576,14 +624,14 @@
                     "value": 1
                 }
             ],
-            "description": "App switch",
+            "description": "Workspace swtich / Previous app",
             "from": {
-                "key_code": "w",
+                "key_code": "q",
                 "modifiers": { "optional": ["any"] }
             },
             "to": [
                 {
-                    "key_code": "tab",
+                    "key_code": "grave_accent_and_tilde",
                     "modifiers": ["command"]
                 }
             ],
@@ -618,7 +666,7 @@
                     "value": 1
                 }
             ],
-            "description": "Word left",
+            "description": "To word left",
             "from": {
                 "key_code": "u",
                 "modifiers": { "optional": ["any"] }
@@ -639,7 +687,7 @@
                     "value": 1
                 }
             ],
-            "description": "word right",
+            "description": "To word right",
             "from": {
                 "key_code": "o",
                 "modifiers": { "optional": ["any"] }
@@ -660,28 +708,7 @@
                     "value": 1
                 }
             ],
-            "description": "most right",
-            "from": {
-                "key_code": "period",
-                "modifiers": { "optional": ["any"] }
-            },
-            "to": [
-                {
-                    "key_code": "right_arrow",
-                    "modifiers": ["command"]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "name": "caps_lock pressed",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "description": "most left",
+            "description": "To most left",
             "from": {
                 "key_code": "m",
                 "modifiers": { "optional": ["any"] }
@@ -702,7 +729,28 @@
                     "value": 1
                 }
             ],
-            "description": "copy to next line",
+            "description": "To most right",
+            "from": {
+                "key_code": "period",
+                "modifiers": { "optional": ["any"] }
+            },
+            "to": [
+                {
+                    "key_code": "right_arrow",
+                    "modifiers": ["command"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "caps_lock pressed",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "description": "Copy to next line",
             "from": {
                 "key_code": "comma",
                 "modifiers": { "optional": ["any"] }
@@ -723,15 +771,37 @@
                     "value": 1
                 }
             ],
-            "description": "New Line Above",
+            "description": "New line anywhere",
             "from": {
                 "key_code": "return_or_enter",
                 "modifiers": { "optional": ["any"] }
             },
             "to": [
                 {
-                    "key_code": "return_or_enter",
-                    "modifiers": ["command", "shift"]
+                    "key_code": "right_arrow",
+                    "modifiers": ["command"]
+                },
+                { "key_code": "return_or_enter" }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "caps_lock pressed",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "description": "Delete by word",
+            "from": {
+                "key_code": "delete_or_backspace",
+                "modifiers": { "optional": ["any"] }
+            },
+            "to": [
+                {
+                    "key_code": "delete_or_backspace",
+                    "modifiers": ["option"]
                 }
             ],
             "type": "basic"
@@ -744,16 +814,93 @@
                     "value": 1
                 }
             ],
-            "description": "Word Delete",
+            "description": "``` wrap with cursor in between",
             "from": {
-                "key_code": "delete_or_backspace",
+                "key_code": "grave_accent_and_tilde",
                 "modifiers": { "optional": ["any"] }
             },
             "to": [
+                { "key_code": "grave_accent_and_tilde" },
+                { "key_code": "grave_accent_and_tilde" },
+                { "key_code": "grave_accent_and_tilde" },
                 {
-                    "key_code": "delete_or_backspace",
-                    "modifiers": ["option"]
+                    "key_code": "return_or_enter",
+                    "modifiers": ["shift"]
+                },
+                {
+                    "key_code": "return_or_enter",
+                    "modifiers": ["shift"]
+                },
+                { "key_code": "grave_accent_and_tilde" },
+                { "key_code": "grave_accent_and_tilde" },
+                { "key_code": "grave_accent_and_tilde" },
+                { "key_code": "up_arrow" }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "caps_lock pressed",
+                    "type": "variable_if",
+                    "value": 1
                 }
+            ],
+            "description": "() with cursor in between",
+            "from": { "key_code": "9" },
+            "to": [
+                {
+                    "key_code": "9",
+                    "modifiers": ["shift"]
+                },
+                {
+                    "key_code": "0",
+                    "modifiers": ["shift"]
+                },
+                { "key_code": "left_arrow" }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "caps_lock pressed",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "description": "[] with cursor in between",
+            "from": { "key_code": "open_bracket" },
+            "to": [
+                { "key_code": "open_bracket" },
+                { "key_code": "close_bracket" },
+                { "key_code": "left_arrow" }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "caps_lock pressed",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "description": "{} with cursor in between",
+            "from": {
+                "key_code": "open_bracket",
+                "modifiers": { "mandatory": ["shift"] }
+            },
+            "to": [
+                {
+                    "key_code": "open_bracket",
+                    "modifiers": ["shift"]
+                },
+                {
+                    "key_code": "close_bracket",
+                    "modifiers": ["shift"]
+                },
+                { "key_code": "left_arrow" }
             ],
             "type": "basic"
         }
